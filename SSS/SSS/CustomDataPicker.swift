@@ -107,9 +107,44 @@ struct CustomDataPicker: View {
                     .font(.title2.bold())
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
+                
+                if let task = tasks.first(where: { task in
+                    return isSameDay(date1: task.taskDate, date2: currentDate)
+                    
+                }){
+                    
+                    ForEach(task.task){ task in
+                        
+                        VStack(alignment: .leading, spacing: 10){
+                            
+                            // For Custom Timing...
+                            Text(task.time
+                                .addingTimeInterval(CGFloat
+                                    .random(in: 0...5000)),style:
+                                    .time)
+                            
+                            Text(task.title)
+                                .font(.title2.bold())
+                        }
+                        .padding(.vertical, 10)
+                        .padding(.horizontal)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(
+                            Color.purple
+                                .opacity(0.5)
+                                .cornerRadius(10)
+                        )
+                        
+                    }
+                    
+                    }
+                else{
+                    Text("No task Found")
+                }
+                
             }
             .padding()
-            .padding(.top,20)
+            
         }
         .onChange(of: currentMonth) { newValue in
             

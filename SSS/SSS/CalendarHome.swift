@@ -21,6 +21,38 @@ struct CalendarHome: View {
                 
                 
             }
+            .padding(.vertical)
+        }
+        // Safe Area View...
+        .safeAreaInset(edge: .bottom) {
+            
+            HStack {
+                
+                Button(action: {
+                    
+                }, label: {
+                    Text("Add Task")
+                        .fontWeight(.bold)
+                        .padding(.vertical)
+                        .frame(maxWidth: .infinity)
+                        .background(.orange, in: Capsule())
+                })
+                
+                Button(action: {
+                    
+                }, label: {
+                    Text("Add Remainder")
+                        .fontWeight(.bold)
+                        .padding(.vertical)
+                        .frame(maxWidth: .infinity)
+                        .background(.green, in: Capsule())
+                })
+            }
+            .padding(.horizontal)
+            .padding(.top, 10)
+            .foregroundColor(.white)
+            .background(.ultraThinMaterial)
+            
         }
     }
 }
