@@ -52,7 +52,7 @@ struct CustomDataPicker: View {
                 Button(action: {
                     
                     withAnimation{
-                        currentMonth -= 1
+                        currentMonth += 1
                         
                     }
                 }, label: {
