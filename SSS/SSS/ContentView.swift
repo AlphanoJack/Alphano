@@ -11,8 +11,23 @@ struct ContentView: View {
     
     
     var body: some View {
+        TabView{
+            BBB()
+                .tabItem{
+                    Label("Home", systemImage: "house")
+                }
+//            BBBList()
+//                .tabItem{
+//                    Label("Calculator", systemImage: "dollarsign.circle")
+//                }
+            CalendarHome()
+                .tabItem{
+                    Label("Calendar", systemImage: "calendar.badge.clock")
+                }
+           
+            
+        }
         
-        CalendarHome()
     }
 }
     struct ContentView_Previews: PreviewProvider {

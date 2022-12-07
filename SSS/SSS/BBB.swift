@@ -10,7 +10,7 @@ import SwiftUI
 struct BBB: View {
     
 
-    @State var num1 = ""
+    @State private var num1 = ""
     @State var num2 = ""
     @State var num4 : Int = 0
     @State var overTimeBox = ""
@@ -21,39 +21,52 @@ struct BBB: View {
     
     
     var body: some View {
-        VStack{
-            TextField("숫자 num1", text: $num1)
-            TextField("숫자 num2", text: $num2)
-        HStack{
-            TextField("Over Time", text:$overTimeBox)
-                .opacity(checkedOverTime ? 0 : 1.0)
-               
-            Button(action: {
-                self.checkedOverTime.toggle()
-                overTimeBox = ""
-            }, label: {
-                Text("OverTime")
-            })
-            }
+        
+        NavigationView{
             
             
-            
-            Text("num1 + num2 = \(num1num2())")
-            
-            Button(action: {
-                self.plusAll()
-                num1 = ""
-                num2 = ""
-              overTimeBox = ""
+            VStack{
+                NavigationLink(destination: BBBList(num1: $num1, num2: $num2, overTimeBox: $overTimeBox)
+                ){
+                    Image(systemName: "person")
+                }
+                TextField("숫자 num1", text: $num1)
+                TextField("숫자 num2", text: $num2)
+            HStack{
+                TextField("Over Time", text:$overTimeBox)
+                    .opacity(checkedOverTime ? 0 : 1.0)
+                   
+                Button(action: {
+                    self.checkedOverTime.toggle()
+                    overTimeBox = ""
+                }, label: {
+                    Text("OverTime")
+                })
+                }
+                
+                
+                
+                Text("num1 + num2 = \(num1num2())")
+                
+                Button(action: {
+                    self.plusAll()
+                    num1 = ""
+                    num2 = ""
+                  overTimeBox = ""
+
+                    
+                }, label: {
+                    Text("합산")
+                })
+                
+                Text("plus\(num4)")
+                
 
                 
-            }, label: {
-                Text("합산")
-            })
-            
-            Text("plus\(num4)")
-            
-
+            }
+            .navigationTitle("Working")
+                .navigationBarTitleDisplayMode(.automatic)
+           
         }
         
     }

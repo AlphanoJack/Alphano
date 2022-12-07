@@ -53,7 +53,7 @@ var tasks: [TaskMetaData] = [
     TaskMetaData(task:  [
         
         Task(title: "Next Version of SwiftUI")
-    ],  taskDate: getSampleDate(offset: 10)),
+    ],  taskDate: getSampleDate(offset: 17)),
     TaskMetaData(task:  [
         
         Task(title: "iPhone 13 Great Design Change")
