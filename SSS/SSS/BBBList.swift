@@ -20,6 +20,8 @@ struct BBBList: View {
     @Binding var num2 : String
     @Binding var overTimeBox : String
     var mutliplecation : Double = 1.5
+   
+    
     
     @ObservedObject var totalWorkData = myWorkData()
     

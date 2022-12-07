@@ -16,6 +16,7 @@ struct BBB: View {
     @State var overTimeBox = ""
     @State var checkedOverTime = false
     @State var multipliOT : Double = 1.5
+    @State var sendData = false
    
     
     
@@ -53,7 +54,7 @@ struct BBB: View {
                     num1 = ""
                     num2 = ""
                   overTimeBox = ""
-
+                    self.sendData = true
                     
                 }, label: {
                     Text("합산")
