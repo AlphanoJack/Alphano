@@ -81,7 +81,12 @@ struct BBBList: View {
     }
     
     func makeTodayData() {
-        totalWorkData.MyWorkData.append(Work(myWorkingTime: num2, myTotalWorking: todayTotalData(), myOtTime: overTimeBox))
+        if num2.isEmpty {
+            
+        } else {
+            totalWorkData.MyWorkData.append(Work(myWorkingTime: num2, myTotalWorking: todayTotalData(), myOtTime: overTimeBox))
+        }
+        
     }
 }
 
