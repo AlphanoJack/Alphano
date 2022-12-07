@@ -21,6 +21,7 @@ struct BBBList: View {
     @Binding var overTimeBox : String
     var mutliplecation : Double = 1.5
    
+   
     
     
     @ObservedObject var totalWorkData = myWorkData()
@@ -81,11 +82,20 @@ struct BBBList: View {
     }
     
     func makeTodayData() {
+        
+        
+        
         if num2.isEmpty {
             
         } else {
             totalWorkData.MyWorkData.append(Work(myWorkingTime: num2, myTotalWorking: todayTotalData(), myOtTime: overTimeBox))
         }
+        if overTimeBox.isEmpty{
+            
+        } else {
+            totalWorkData.MyWorkData.append(Work(myWorkingTime: num2, myTotalWorking: todayTotalData(), myOtTime: overTimeBox))
+        }
+        
         
     }
 }
