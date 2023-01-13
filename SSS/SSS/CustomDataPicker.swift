@@ -31,6 +31,7 @@ struct CustomDataPicker: View {
                     Text(extraDateYear()[0])
                         .font(.caption)
                         .fontWeight(.semibold)
+                    //맨위 year기록하는 칸
                     
                     Text(extraDateYearText()[0])
                         .font(.title.bold())
@@ -264,7 +265,7 @@ struct CustomDataPicker: View {
 
 struct CustomDataPicker_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CalendarHome()
     }
 }
 

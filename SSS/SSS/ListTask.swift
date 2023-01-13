@@ -21,3 +21,23 @@ struct Work : Identifiable {
 class myWorkData : ObservableObject {
     @Published var MyWorkData = [Work]()
 }
+
+//class userHwage : ObservableObject {
+//    @Published var UserHwage : String
+//    
+//    init() {
+//        let defaults = UserDefaults.standard
+//        hWage = defaults.string(forKey: "userWage_Key")
+//    }
+//}
+
+enum Keys {
+    static var dayWage = ""
+}
+
+
+class userWage : ObservableObject {
+    @Published var dayWage : String = UserDefaults.standard.object(forKey: Keys.dayWage) as? String ?? "" {
+        didSet { UserDefaults.standard.set(self.dayWage, forKey: Keys.dayWage)}
+    }
+}

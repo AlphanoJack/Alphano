@@ -6,19 +6,29 @@
 //
 
 import SwiftUI
+import Combine
 
 struct BBB: View {
     
-
-    @State private var num1 = ""
-    @State var num2 = ""
-    @State var num4 : Int = 0
+    
+    
+    @AppStorage("hWage") var hWage = ""
+//    @State private var num1 = ""
+//    @State var num2 = ""
+    @AppStorage("second_Key") var num2 = ""
+    @AppStorage("last_Key") var num4 = 0
     @State var overTimeBox = ""
     @State var checkedOverTime = false
-    @State var multipliOT : Double = 1.5
-    @State var sendData = false
-   
+    @AppStorage("OT_Key") var uOT  = ""
+    @State var pickingDate : Date = Date()
+    @AppStorage("day_night") var shiftWork = false
+    @AppStorage("night_work") var nightWork = ""
+    var NightAdditional : Double = 1.5
     
+    
+   
+   
+   
     
     
     var body: some View {
@@ -27,12 +37,14 @@ struct BBB: View {
             
             
             VStack{
-                NavigationLink(destination: BBBList(num1: $num1, num2: $num2, overTimeBox: $overTimeBox)
+                NavigationLink(destination: BBBList(hWage: $hWage, num2: $num2, overTimeBox: $overTimeBox)
                 ){
                     Image(systemName: "person")
                 }
-                TextField("숫자 num1", text: $num1)
+
+                Text("시급 : \(hWage)")
                 TextField("숫자 num2", text: $num2)
+               
             HStack{
                 TextField("Over Time", text:$overTimeBox)
                     .opacity(checkedOverTime ? 0 : 1.0)
@@ -40,10 +52,14 @@ struct BBB: View {
                 Button(action: {
                     self.checkedOverTime.toggle()
                     overTimeBox = ""
+                    
                 }, label: {
                     Text("OverTime")
                 })
                 }
+                
+                TextField("Night Time", text: $nightWork)
+                    .opacity(shiftWork ? 1.0 : 0)
                 
                 
                 
@@ -51,10 +67,9 @@ struct BBB: View {
                 
                 Button(action: {
                     self.plusAll()
-                    num1 = ""
-                    num2 = ""
-                  overTimeBox = ""
-                    self.sendData = true
+                    
+                    
+                    
                     
                 }, label: {
                     Text("합산")
@@ -62,7 +77,24 @@ struct BBB: View {
                 
                 Text("plus\(num4)")
                 
-
+                DatePicker("Select a date", selection: $pickingDate)
+                    .accentColor(Color.red)
+                    .datePickerStyle(
+                        CompactDatePickerStyle()
+                    )
+                
+                
+                Button(action: {
+                    num4 = 0
+                    //여기다가 월별 정산후에 다른값으로 넘겨주는 로직 줘야함 그래야 월별이건 주간별이건 데이터를 축척 가능함
+     
+                    
+                    
+                }, label: {
+                    Text("정산하기")
+                })
+                
+                
                 
             }
             .navigationTitle("Working")
@@ -76,13 +108,17 @@ struct BBB: View {
     
     
     func num1num2() -> Int {
-        let Num1 = Double(num1) ?? 0
+        let Num1 = Double(hWage) ?? 0
         let Num2 = Double(num2) ?? 0
         let Num3 = Num1 * Num2
         let OverTimeBox = Double(overTimeBox) ?? 0
-        let MultipliOT = multipliOT
-        let OT = Num1 * OverTimeBox * MultipliOT
-        let TotalHourlyWage = Num3 + OT
+        let userOT = Double(uOT) ?? 0
+        let NightWork = Double(nightWork) ?? 0
+        let NightTotal = Num1 * NightWork * NightAdditional
+        let OT = Num1 * OverTimeBox * userOT
+        let TotalHourlyWage = Num3 + OT + NightTotal
+        
+        
         
         
 
@@ -96,6 +132,7 @@ struct BBB: View {
         if num1num2() >= 0 {
             num4 += sum
         }
+        UserDefaults.standard.value(forKey: "data")
     }
     
     
@@ -107,3 +144,4 @@ struct BBB_Previews: PreviewProvider {
         BBB()
     }
 }
+

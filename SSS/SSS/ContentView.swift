@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+   
     
     
     var body: some View {
@@ -23,6 +24,10 @@ struct ContentView: View {
             CalendarHome()
                 .tabItem{
                     Label("Calendar", systemImage: "calendar.badge.clock")
+                }
+            UserSetting()
+                .tabItem{
+                    Label("UserSetting", systemImage: "calendar.badge.clock")
                 }
            
             
