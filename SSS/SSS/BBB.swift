@@ -19,11 +19,13 @@ struct BBB: View {
     @AppStorage("last_Key") var num4 = 0
     @State var overTimeBox = ""
     @State var checkedOverTime = false
-    @AppStorage("OT_Key") var uOT  = ""
+    @AppStorage("OT_Key") var uOT  = 1.5
     @State var pickingDate : Date = Date()
+    @AppStorage("user_OT") var userOT = false
     @AppStorage("day_night") var shiftWork = false
     @AppStorage("night_work") var nightWork = ""
     var NightAdditional : Double = 1.5
+    
     
     
    
@@ -45,18 +47,19 @@ struct BBB: View {
                 Text("시급 : \(hWage)")
                 TextField("숫자 num2", text: $num2)
                
-            HStack{
+
                 TextField("Over Time", text:$overTimeBox)
-                    .opacity(checkedOverTime ? 0 : 1.0)
-                   
-                Button(action: {
-                    self.checkedOverTime.toggle()
-                    overTimeBox = ""
+                    .opacity(userOT ? 1.0 : 0)
                     
-                }, label: {
-                    Text("OverTime")
-                })
-                }
+                   
+//                Button(action: {
+//                    self.checkedOverTime.toggle()
+//                    overTimeBox = ""
+//
+//                }, label: {
+//                    Text("OverTime")
+//                })
+                
                 
                 TextField("Night Time", text: $nightWork)
                     .opacity(shiftWork ? 1.0 : 0)
@@ -67,8 +70,6 @@ struct BBB: View {
                 
                 Button(action: {
                     self.plusAll()
-                    
-                    
                     
                     
                 }, label: {
@@ -112,7 +113,7 @@ struct BBB: View {
         let Num2 = Double(num2) ?? 0
         let Num3 = Num1 * Num2
         let OverTimeBox = Double(overTimeBox) ?? 0
-        let userOT = Double(uOT) ?? 0
+        let userOT = Double(uOT)
         let NightWork = Double(nightWork) ?? 0
         let NightTotal = Num1 * NightWork * NightAdditional
         let OT = Num1 * OverTimeBox * userOT
@@ -144,4 +145,7 @@ struct BBB_Previews: PreviewProvider {
         BBB()
     }
 }
+
+
+
 

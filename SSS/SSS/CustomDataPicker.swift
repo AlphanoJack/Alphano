@@ -15,12 +15,17 @@ struct CustomDataPicker: View {
     
     @State var currentMonth : Int = 0
     
+    @AppStorage("hWage") var hWage = ""
+    
+    var tasks: [TaskMetaData] = [
+    TaskMetaData(task: [Task(title: "", dayHwage: "", dayWokrTime: "", dayOTTime: "", dayNightWorkTime: "")], taskDate: getSampleDate(offset: 0))]
+    
     var body: some View {
         VStack(spacing: 35){
             
             //Days
             let days : [String] =
-            ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+            ["일", "월", "화", "수", "목", "금", "토"]
             
             
             HStack(spacing: 20){
@@ -104,7 +109,7 @@ struct CustomDataPicker: View {
             }
             VStack(spacing: 15){
                 
-                Text("Tasks")
+                Text("근무 일지")
                     .font(.title2.bold())
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
@@ -126,6 +131,7 @@ struct CustomDataPicker: View {
                             
                             Text(task.title)
                                 .font(.title2.bold())
+                            
                         }
                         .padding(.vertical, 10)
                         .padding(.horizontal)
@@ -291,3 +297,4 @@ extension Date {
         }
     }
 }
+
