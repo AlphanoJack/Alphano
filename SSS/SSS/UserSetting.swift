@@ -9,6 +9,9 @@ import SwiftUI
 
 struct UserSetting: View {
     
+    @State var showPicker = false
+    @State var selectedImage: UIImage?
+    
     
     
     @AppStorage("hWage") var hWage = ""
@@ -20,8 +23,31 @@ struct UserSetting: View {
         NavigationView{
             VStack{
                 HStack(spacing: 30){
-                    Circle()
-                        .frame(width: 100, height: 100)
+                    ZStack{
+                        if selectedImage != nil {
+                            
+                            
+                            
+                            Image(uiImage: selectedImage!)
+                                .resizable()
+                                .frame(width: 100, height: 100)
+                        }
+                        Button(action: {
+                            
+                            // Show Image Picker
+                            showPicker = true
+                        }, label: {
+                            Rectangle()
+                                .frame(width: 100, height: 100)
+                                .opacity(showPicker ? 1 : 0)
+                                
+                        }).sheet(isPresented: $showPicker, onDismiss: nil) {
+                            // Image Picker
+                            ImagePicker(selectedImage: $selectedImage, showPicker: $showPicker)
+                            
+                        }
+                        
+                    }
                     VStack(spacing: 15){
                         Text("User Name")
                         Text("User e-mail")
@@ -47,7 +73,13 @@ struct UserSetting: View {
             }
         }
     }
+
+//    func ImageSave() {
+//        let saveImage = selectedImage
+//        let saveImage = UserDefaults.standard.value(forKey: "save_Image")
+//    }
 }
+
 
 
 

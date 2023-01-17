@@ -29,6 +29,7 @@
 		FAB87AF8293B955000C43AE1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB87AF7293B955000C43AE1 /* Task.swift */; };
 		FAF2B7752934744800D474F0 /* BBB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2B7742934744800D474F0 /* BBB.swift */; };
 		FAF97DD72975520F008587D3 /* UserFixPersonalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF97DD62975520F008587D3 /* UserFixPersonalData.swift */; };
+		FAF97DE129761B71008587D3 /* ProfileImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF97DE029761B71008587D3 /* ProfileImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		FAB87AF7293B955000C43AE1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		FAF2B7742934744800D474F0 /* BBB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBB.swift; sourceTree = "<group>"; };
 		FAF97DD62975520F008587D3 /* UserFixPersonalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFixPersonalData.swift; sourceTree = "<group>"; };
+		FAF97DE029761B71008587D3 /* ProfileImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				FAAC64FC293D8001001316AD /* BBBList.swift */,
 				FAAC64FE2940278E001316AD /* ListTask.swift */,
 				FAAC6500294C3567001316AD /* UserSetting.swift */,
+				FAF97DE029761B71008587D3 /* ProfileImagePicker.swift */,
 				FAF97DD62975520F008587D3 /* UserFixPersonalData.swift */,
 				FA8ED5F129349A9300A72ACB /* XXX.swift */,
 				FA8ED5F629388B5D00A72ACB /* FSC.swift */,
@@ -313,6 +316,7 @@
 				FA8ED5FE2939B3DD00A72ACB /* CustomDataPicker.swift in Sources */,
 				FA5097CC293331E1006A4721 /* ContentView.swift in Sources */,
 				FAAC64FF2940278E001316AD /* ListTask.swift in Sources */,
+				FAF97DE129761B71008587D3 /* ProfileImagePicker.swift in Sources */,
 				FA8ED5F229349A9300A72ACB /* XXX.swift in Sources */,
 				FA8ED5F729388B5D00A72ACB /* FSC.swift in Sources */,
 				E5BF0AB62974EE2C000C0088 /* LoginPage.swift in Sources */,
