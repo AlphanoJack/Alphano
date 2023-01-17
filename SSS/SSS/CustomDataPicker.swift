@@ -16,6 +16,9 @@ struct CustomDataPicker: View {
     @State var currentMonth : Int = 0
     
     @AppStorage("hWage") var hWage = ""
+    @AppStorage("totalW") var totalWage = ""
+    @AppStorage("OT_Key") var uOT  = ""
+    @AppStorage ("overTB") var overTimeBox = ""
     
     var tasks: [TaskMetaData] = [
     TaskMetaData(task: [Task(title: "", dayHwage: "", dayWokrTime: "", dayOTTime: "", dayNightWorkTime: "")], taskDate: getSampleDate(offset: 0))]
@@ -124,11 +127,13 @@ struct CustomDataPicker: View {
                         VStack(alignment: .leading, spacing: 10){
                             
                             // For Custom Timing...
-                            Text(task.time
-                                .addingTimeInterval(CGFloat
-                                    .random(in: 0...5000)),style:
-                                    .time)
                             
+                            Text("시급 :" + hWage)
+                            Text("배수 :" + uOT)
+                            Text("나이트 타임 :" + overTimeBox)
+                            
+                            Text(task.title)
+                                .font(.title2.bold())
                             Text(task.title)
                                 .font(.title2.bold())
                             

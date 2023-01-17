@@ -10,14 +10,15 @@ import Combine
 
 struct BBB: View {
     
+
     
     
     @AppStorage("hWage") var hWage = ""
 //    @State private var num1 = ""
 //    @State var num2 = ""
     @AppStorage("second_Key") var num2 = ""
-    @AppStorage("last_Key") var num4 = 0
-    @State var overTimeBox = ""
+    @AppStorage("la st_Key") var num4 = 0
+    @AppStorage ("overTB") var overTimeBox = ""
     @State var checkedOverTime = false
     @AppStorage("OT_Key") var uOT  = 1.5
     @State var pickingDate : Date = Date()
@@ -25,7 +26,8 @@ struct BBB: View {
     @AppStorage("day_night") var shiftWork = false
     @AppStorage("night_work") var nightWork = ""
     var NightAdditional : Double = 1.5
-    
+    @State var isPlus = false
+    @AppStorage("totalW") var totalWage = ""
     
     
    
@@ -70,13 +72,14 @@ struct BBB: View {
                 
                 Button(action: {
                     self.plusAll()
-                    
+                    isPlus.toggle()
                     
                 }, label: {
                     Text("합산")
                 })
                 
                 Text("plus\(num4)")
+                
                 
                 DatePicker("Select a date", selection: $pickingDate)
                     .accentColor(Color.red)
@@ -120,7 +123,7 @@ struct BBB: View {
         let TotalHourlyWage = Num3 + OT + NightTotal
         
         
-        
+        let totalWage = TotalHourlyWage
         
 
         return Int(TotalHourlyWage)
