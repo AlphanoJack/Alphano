@@ -16,8 +16,9 @@ struct CustomDataPicker: View {
     @State var currentMonth : Int = 0
     
     @AppStorage("hWage") var hWage = ""
-    
-    
+    @AppStorage("totalW") var totalWage = ""
+    @AppStorage("OT_Key") var uOT  = ""
+    @AppStorage ("overTB") var overTimeBox = ""
     
     var tasks: [TaskMetaData] = [
     TaskMetaData(task: [Task(title: "", dayHwage: "", dayWokrTime: "", dayOTTime: "", dayNightWorkTime: "")], taskDate: getSampleDate(offset: 0))]
@@ -124,19 +125,21 @@ struct CustomDataPicker: View {
                     //여기를 리스트형태나 ? ForEach 루프를 활용해도 상관없으나
                     // bbb에서 버튼클릭 메소드가 전송이 되면 여기서 리스트가 만들어져야함
                     ForEach(task.task){ task in
-                        
+                                            
                         VStack(alignment: .leading, spacing: 10){
-                            
+                                                
                             // For Custom Timing...
-                            Text(task.time
-                                .addingTimeInterval(CGFloat
-                                    .random(in: 0...5000)),style:
-                                    .time)
-                            
+                                                
+                            Text("시급 :" + hWage)
+                            Text("배수 :" + uOT)
+                            Text("나이트 타임 :" + overTimeBox)
+                                                
                             Text(task.title)
                                 .font(.title2.bold())
-                            
-                        }
+                            Text(task.title)
+                                .font(.title2.bold())
+                                                
+                                            }
                         .padding(.vertical, 10)
                         .padding(.horizontal)
                         .frame(maxWidth: .infinity, alignment: .leading)
