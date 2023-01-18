@@ -26,10 +26,24 @@ struct Task : Identifiable {
     var dayNightWorkTime : String
 }
 
+//class TaskClone : Identifiable {
+//    var name : String
+//    var age : String
+//
+//
+//    init(_ name1 : String, _ age2: String) {
+//        self.name = name1
+//        self.age = age2
+//    }
+//}
+
+//class TaskData : ObservableObject {
+//    @Published
+//}
 
 //Total Task Meta View...
 struct TaskMetaData : Identifiable {
-    
+
     var id = UUID().uuidString
     var task: [Task]
     var taskDate: Date
@@ -38,9 +52,9 @@ struct TaskMetaData : Identifiable {
 //sample Date for Testing...
 func getSampleDate(offset: Int) -> Date {
     let calender = Calendar.current
-    
+
     let date = calender.date(byAdding: .day, value: offset, to: Date())
-    
+
     return date ?? Date()
 }
 

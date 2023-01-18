@@ -33,6 +33,8 @@ struct LoginPage: View {
                     .background(Color.purple)
                     .foregroundColor(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 6))
+                    .frame(width: 100, height: 50 )
+                    .padding(.bottom, 10)
                 })
                 
                 NavigationLink(destination: LoginView(),
@@ -46,6 +48,8 @@ struct LoginPage: View {
                     .background(Color.black)
                     .foregroundColor(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 6))
+                    .frame(width: 100, height: 50 )
+                    .padding(.bottom, 10)
                 })
                 NavigationLink(destination: ContentView(),
                                label: {
@@ -58,6 +62,8 @@ struct LoginPage: View {
                     .background(Color.blue)
                     .foregroundColor(.white)
                     .clipShape(RoundedRectangle(cornerRadius: 6))
+                    .frame(width: 100, height: 50 )
+                    .padding(.bottom, 10)
                 })
                 Spacer()
                 Spacer()

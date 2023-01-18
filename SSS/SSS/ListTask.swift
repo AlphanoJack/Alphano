@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-import Combine
+
 
 
 struct Work : Identifiable {
@@ -31,13 +31,4 @@ class myWorkData : ObservableObject {
 //    }
 //}
 
-enum Keys {
-    static var dayWage = ""
-}
 
-
-class userWage : ObservableObject {
-    @Published var dayWage : String = UserDefaults.standard.object(forKey: Keys.dayWage) as? String ?? "" {
-        didSet { UserDefaults.standard.set(self.dayWage, forKey: Keys.dayWage)}
-    }
-}

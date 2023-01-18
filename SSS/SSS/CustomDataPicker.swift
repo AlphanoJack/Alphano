@@ -17,6 +17,8 @@ struct CustomDataPicker: View {
     
     @AppStorage("hWage") var hWage = ""
     
+    
+    
     var tasks: [TaskMetaData] = [
     TaskMetaData(task: [Task(title: "", dayHwage: "", dayWokrTime: "", dayOTTime: "", dayNightWorkTime: "")], taskDate: getSampleDate(offset: 0))]
     
@@ -118,7 +120,9 @@ struct CustomDataPicker: View {
                     return isSameDay(date1: task.taskDate, date2: currentDate)
                     
                 }){
-                    
+                    // 근무 일지 수정란
+                    //여기를 리스트형태나 ? ForEach 루프를 활용해도 상관없으나
+                    // bbb에서 버튼클릭 메소드가 전송이 되면 여기서 리스트가 만들어져야함
                     ForEach(task.task){ task in
                         
                         VStack(alignment: .leading, spacing: 10){
@@ -146,7 +150,7 @@ struct CustomDataPicker: View {
                     
                     }
                 else{
-                    Text("No task Found")
+                    Text("근무 기록이 없습니다")
                 }
                 
             }
