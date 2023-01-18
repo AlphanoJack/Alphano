@@ -16,9 +16,7 @@
 		FA5097DB293331E2006A4721 /* SSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5097DA293331E2006A4721 /* SSSTests.swift */; };
 		FA5097E5293331E2006A4721 /* SSSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5097E4293331E2006A4721 /* SSSUITests.swift */; };
 		FA5097E7293331E2006A4721 /* SSSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5097E6293331E2006A4721 /* SSSUITestsLaunchTests.swift */; };
-		FA8ED5F229349A9300A72ACB /* XXX.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8ED5F129349A9300A72ACB /* XXX.swift */; };
 		FA8ED5F5293830F700A72ACB /* JTAppleCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = FA8ED5F4293830F700A72ACB /* JTAppleCalendar */; };
-		FA8ED5F729388B5D00A72ACB /* FSC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8ED5F629388B5D00A72ACB /* FSC.swift */; };
 		FA8ED5FA29388BA000A72ACB /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = FA8ED5F929388BA000A72ACB /* FSCalendar */; };
 		FA8ED5FC2939B37600A72ACB /* CalendarHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8ED5FB2939B37600A72ACB /* CalendarHome.swift */; };
 		FA8ED5FE2939B3DD00A72ACB /* CustomDataPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8ED5FD2939B3DD00A72ACB /* CustomDataPicker.swift */; };
@@ -30,6 +28,8 @@
 		FAF2B7752934744800D474F0 /* BBB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2B7742934744800D474F0 /* BBB.swift */; };
 		FAF97DD72975520F008587D3 /* UserFixPersonalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF97DD62975520F008587D3 /* UserFixPersonalData.swift */; };
 		FAF97DE129761B71008587D3 /* ProfileImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF97DE029761B71008587D3 /* ProfileImagePicker.swift */; };
+		FAF97DE429769BC8008587D3 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF97DE329769BC8008587D3 /* ChartViewModel.swift */; };
+		FAF97DE62976A077008587D3 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF97DE52976A077008587D3 /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +62,6 @@
 		FA5097E0293331E2006A4721 /* SSSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5097E4293331E2006A4721 /* SSSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSSUITests.swift; sourceTree = "<group>"; };
 		FA5097E6293331E2006A4721 /* SSSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSSUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		FA8ED5F129349A9300A72ACB /* XXX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XXX.swift; sourceTree = "<group>"; };
-		FA8ED5F629388B5D00A72ACB /* FSC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSC.swift; sourceTree = "<group>"; };
 		FA8ED5FB2939B37600A72ACB /* CalendarHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHome.swift; sourceTree = "<group>"; };
 		FA8ED5FD2939B3DD00A72ACB /* CustomDataPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataPicker.swift; sourceTree = "<group>"; };
 		FA8ED5FF2939C0F600A72ACB /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
@@ -74,6 +72,8 @@
 		FAF2B7742934744800D474F0 /* BBB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBB.swift; sourceTree = "<group>"; };
 		FAF97DD62975520F008587D3 /* UserFixPersonalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFixPersonalData.swift; sourceTree = "<group>"; };
 		FAF97DE029761B71008587D3 /* ProfileImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImagePicker.swift; sourceTree = "<group>"; };
+		FAF97DE329769BC8008587D3 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
+		FAF97DE52976A077008587D3 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,14 +134,14 @@
 				FAAC6500294C3567001316AD /* UserSetting.swift */,
 				FAF97DE029761B71008587D3 /* ProfileImagePicker.swift */,
 				FAF97DD62975520F008587D3 /* UserFixPersonalData.swift */,
-				FA8ED5F129349A9300A72ACB /* XXX.swift */,
-				FA8ED5F629388B5D00A72ACB /* FSC.swift */,
 				FA8ED5FB2939B37600A72ACB /* CalendarHome.swift */,
 				FA8ED5FD2939B3DD00A72ACB /* CustomDataPicker.swift */,
 				FAB87AF7293B955000C43AE1 /* Task.swift */,
 				FA8ED5FF2939C0F600A72ACB /* DateValue.swift */,
 				E5BF0AB52974EE2C000C0088 /* LoginPage.swift */,
 				E5BF0AB72974EE6F000C0088 /* LoginView.swift */,
+				FAF97DE329769BC8008587D3 /* ChartViewModel.swift */,
+				FAF97DE52976A077008587D3 /* ChartView.swift */,
 				FA5097CD293331E2006A4721 /* Assets.xcassets */,
 				FA5097CF293331E2006A4721 /* Preview Content */,
 			);
@@ -311,14 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF97DE429769BC8008587D3 /* ChartViewModel.swift in Sources */,
 				FAAC64FD293D8001001316AD /* BBBList.swift in Sources */,
 				FAF97DD72975520F008587D3 /* UserFixPersonalData.swift in Sources */,
 				FA8ED5FE2939B3DD00A72ACB /* CustomDataPicker.swift in Sources */,
 				FA5097CC293331E1006A4721 /* ContentView.swift in Sources */,
 				FAAC64FF2940278E001316AD /* ListTask.swift in Sources */,
 				FAF97DE129761B71008587D3 /* ProfileImagePicker.swift in Sources */,
-				FA8ED5F229349A9300A72ACB /* XXX.swift in Sources */,
-				FA8ED5F729388B5D00A72ACB /* FSC.swift in Sources */,
+				FAF97DE62976A077008587D3 /* ChartView.swift in Sources */,
 				E5BF0AB62974EE2C000C0088 /* LoginPage.swift in Sources */,
 				FA5097CA293331E1006A4721 /* SSSApp.swift in Sources */,
 				E5BF0AB82974EE6F000C0088 /* LoginView.swift in Sources */,

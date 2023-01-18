@@ -150,7 +150,7 @@ struct CustomDataPicker: View {
                     
                     }
                 else{
-                    Text("No task Found")
+                    Text("근무 기록이 없습니다")
                 }
                 
             }
