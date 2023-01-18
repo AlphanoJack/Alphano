@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E5BF0AB62974EE2C000C0088 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BF0AB52974EE2C000C0088 /* LoginPage.swift */; };
 		E5BF0AB82974EE6F000C0088 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BF0AB72974EE6F000C0088 /* LoginView.swift */; };
+		E5D5DE0E297813AA00CE659B /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D5DE0D297813AA00CE659B /* ChartView.swift */; };
+		E5D5DE10297813CD00CE659B /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D5DE0F297813CD00CE659B /* ChartViewModel.swift */; };
 		FA5097CA293331E1006A4721 /* SSSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5097C9293331E1006A4721 /* SSSApp.swift */; };
 		FA5097CC293331E1006A4721 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5097CB293331E1006A4721 /* ContentView.swift */; };
 		FA5097CE293331E2006A4721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5097CD293331E2006A4721 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		E5BF0AB52974EE2C000C0088 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		E5BF0AB72974EE6F000C0088 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E5D5DE0D297813AA00CE659B /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		E5D5DE0F297813CD00CE659B /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
 		FA5097C6293331E1006A4721 /* SSS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5097C9293331E1006A4721 /* SSSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSSApp.swift; sourceTree = "<group>"; };
 		FA5097CB293331E1006A4721 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				FA8ED5FF2939C0F600A72ACB /* DateValue.swift */,
 				E5BF0AB52974EE2C000C0088 /* LoginPage.swift */,
 				E5BF0AB72974EE6F000C0088 /* LoginView.swift */,
+				E5D5DE0D297813AA00CE659B /* ChartView.swift */,
+				E5D5DE0F297813CD00CE659B /* ChartViewModel.swift */,
 				FA5097CD293331E2006A4721 /* Assets.xcassets */,
 				FA5097CF293331E2006A4721 /* Preview Content */,
 			);
@@ -313,10 +319,12 @@
 				FA8ED5F729388B5D00A72ACB /* FSC.swift in Sources */,
 				E5BF0AB62974EE2C000C0088 /* LoginPage.swift in Sources */,
 				FA5097CA293331E1006A4721 /* SSSApp.swift in Sources */,
+				E5D5DE0E297813AA00CE659B /* ChartView.swift in Sources */,
 				E5BF0AB82974EE6F000C0088 /* LoginView.swift in Sources */,
 				FA8ED6002939C0F600A72ACB /* DateValue.swift in Sources */,
 				FA8ED5FC2939B37600A72ACB /* CalendarHome.swift in Sources */,
 				FAAC6501294C3567001316AD /* UserSetting.swift in Sources */,
+				E5D5DE10297813CD00CE659B /* ChartViewModel.swift in Sources */,
 				FAB87AF8293B955000C43AE1 /* Task.swift in Sources */,
 				FAF2B7752934744800D474F0 /* BBB.swift in Sources */,
 			);
