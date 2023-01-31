@@ -20,7 +20,7 @@ struct BBB: View {
     @State var overTimeBox = ""
     @State var checkedOverTime = false
     @AppStorage("OT_Key") var uOT  = 1.5
-    @State var pickingDate : Date = Date()
+    @Binding var pickingDate : Date
     @AppStorage("user_OT") var userOT = false
     @AppStorage("day_night") var shiftWork = false
     @AppStorage("night_work") var nightWork = ""
@@ -140,11 +140,11 @@ struct BBB: View {
     
 }
 
-struct BBB_Previews: PreviewProvider {
-    static var previews: some View {
-        BBB()
-    }
-}
+//struct BBB_Previews: PreviewProvider {
+//    static var previews: some View {
+//        BBB()
+//    }
+//}
 
 
 

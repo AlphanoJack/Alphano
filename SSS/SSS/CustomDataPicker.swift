@@ -15,13 +15,17 @@ struct CustomDataPicker: View {
     
     @State var currentMonth : Int = 0
     
+    @Binding var pickingDate : Date
+    
     @AppStorage("hWage") var hWage = ""
     @AppStorage("totalW") var totalWage = ""
     @AppStorage("OT_Key") var uOT  = ""
     @AppStorage ("overTB") var overTimeBox = ""
     
-    var tasks: [TaskMetaData] = [
-    TaskMetaData(task: [Task(title: "", dayHwage: "", dayWokrTime: "", dayOTTime: "", dayNightWorkTime: "")], taskDate: getSampleDate(offset: 0))]
+    
+    
+//    lazy var tasks: [TaskMetaData] = [
+//    TaskMetaData(task: [Task(title: hWage, dayHwage: hWage, dayWokrTime: hWage, dayOTTime: hWage, dayNightWorkTime: hWage)], taskDate: getSampleDate(offset: -1))]
     
     var body: some View {
         VStack(spacing: 35){
@@ -120,7 +124,7 @@ struct CustomDataPicker: View {
                 if let task = tasks.first(where: { task in
                     return isSameDay(date1: task.taskDate, date2: currentDate)
                     
-                }){
+                }) {
                     // 근무 일지 수정란
                     //여기를 리스트형태나 ? ForEach 루프를 활용해도 상관없으나
                     // bbb에서 버튼클릭 메소드가 전송이 되면 여기서 리스트가 만들어져야함
@@ -278,7 +282,7 @@ struct CustomDataPicker: View {
 
 struct CustomDataPicker_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarHome()
+        ContentView()
     }
 }
 

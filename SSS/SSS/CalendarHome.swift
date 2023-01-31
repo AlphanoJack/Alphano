@@ -11,13 +11,15 @@ struct CalendarHome: View {
     
     @State var currentDate: Date = Date()
     
+    @Binding var pickingDate: Date
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false){
             
             VStack(spacing: 20) {
                 
                 //custom Data Picker...
-                CustomDataPicker(currentDate: $currentDate)
+                CustomDataPicker(currentDate: $currentDate, pickingDate: $pickingDate)
                 
                 
             }
@@ -59,6 +61,6 @@ struct CalendarHome: View {
 
 struct CalendarHome_Previews: PreviewProvider {
     static var previews: some View {
-        CalendarHome()
+        ContentView()
     }
 }

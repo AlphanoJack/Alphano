@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
    
-    
+    @State var pickingDate = Date()
     
     var body: some View {
         TabView{
-            BBB()
+            BBB(pickingDate: $pickingDate)
                 .tabItem{
                     Label("Home", systemImage: "house")
                 }
@@ -21,7 +21,7 @@ struct ContentView: View {
 //                .tabItem{
 //                    Label("Calculator", systemImage: "dollarsign.circle")
 //                }
-            CalendarHome()
+            CalendarHome(pickingDate: $pickingDate)
                 .tabItem{
                     Label("Calendar", systemImage: "calendar.badge.clock")
                 }

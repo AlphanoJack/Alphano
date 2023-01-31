@@ -25,6 +25,7 @@
 		FAAC64FF2940278E001316AD /* ListTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC64FE2940278E001316AD /* ListTask.swift */; };
 		FAAC6501294C3567001316AD /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAC6500294C3567001316AD /* UserSetting.swift */; };
 		FAB87AF8293B955000C43AE1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB87AF7293B955000C43AE1 /* Task.swift */; };
+		FAC57AED298930D200A82800 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FAC57AEC298930D200A82800 /* Alamofire */; };
 		FAF2B7752934744800D474F0 /* BBB.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF2B7742934744800D474F0 /* BBB.swift */; };
 		FAF97DD72975520F008587D3 /* UserFixPersonalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF97DD62975520F008587D3 /* UserFixPersonalData.swift */; };
 		FAF97DE129761B71008587D3 /* ProfileImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF97DE029761B71008587D3 /* ProfileImagePicker.swift */; };
@@ -69,6 +70,7 @@
 		FAAC64FE2940278E001316AD /* ListTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTask.swift; sourceTree = "<group>"; };
 		FAAC6500294C3567001316AD /* UserSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetting.swift; sourceTree = "<group>"; };
 		FAB87AF7293B955000C43AE1 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		FAC57AEA2989307900A82800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FAF2B7742934744800D474F0 /* BBB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BBB.swift; sourceTree = "<group>"; };
 		FAF97DD62975520F008587D3 /* UserFixPersonalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFixPersonalData.swift; sourceTree = "<group>"; };
 		FAF97DE029761B71008587D3 /* ProfileImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImagePicker.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC57AED298930D200A82800 /* Alamofire in Frameworks */,
 				FA8ED5F5293830F700A72ACB /* JTAppleCalendar in Frameworks */,
 				FA8ED5FA29388BA000A72ACB /* FSCalendar in Frameworks */,
 			);
@@ -126,6 +129,7 @@
 		FA5097C8293331E1006A4721 /* SSS */ = {
 			isa = PBXGroup;
 			children = (
+				FAC57AEA2989307900A82800 /* Info.plist */,
 				FA5097C9293331E1006A4721 /* SSSApp.swift */,
 				FA5097CB293331E1006A4721 /* ContentView.swift */,
 				FAF2B7742934744800D474F0 /* BBB.swift */,
@@ -192,6 +196,7 @@
 			packageProductDependencies = (
 				FA8ED5F4293830F700A72ACB /* JTAppleCalendar */,
 				FA8ED5F929388BA000A72ACB /* FSCalendar */,
+				FAC57AEC298930D200A82800 /* Alamofire */,
 			);
 			productName = SSS;
 			productReference = FA5097C6293331E1006A4721 /* SSS.app */;
@@ -268,6 +273,7 @@
 			packageReferences = (
 				FA8ED5F3293830F700A72ACB /* XCRemoteSwiftPackageReference "JTAppleCalendar" */,
 				FA8ED5F829388BA000A72ACB /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				FAC57AEB298930D200A82800 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = FA5097C7293331E1006A4721 /* Products */;
 			projectDirPath = "";
@@ -488,6 +494,7 @@
 				DEVELOPMENT_TEAM = T6JJFP3652;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SSS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -517,6 +524,7 @@
 				DEVELOPMENT_TEAM = T6JJFP3652;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SSS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -669,6 +677,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		FAC57AEB298930D200A82800 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -681,6 +697,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FA8ED5F829388BA000A72ACB /* XCRemoteSwiftPackageReference "FSCalendar" */;
 			productName = FSCalendar;
+		};
+		FAC57AEC298930D200A82800 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAC57AEB298930D200A82800 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
