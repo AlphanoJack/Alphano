@@ -27,44 +27,7 @@ struct Task : Identifiable {
 }
 
 
-//class TaskC : Identifiable {
-//
-//
-//
-//    var id = UUID().uuidString
-//    var title: String
-//    var time: Date = Date()
-//    var dayHwage : String
-//    var dayWokrTime : String
-//    var dayOTTime : String
-//    var dayNightWorkTime : String
-//
-//    init(id: String = UUID().uuidString, title: String, time: Date, dayHwage: String, dayWokrTime: String, dayOTTime: String, dayNightWorkTime: String) {
-//        self.id = id
-//        self.title = title
-//        self.time = time
-//        self.dayHwage = dayHwage
-//        self.dayWokrTime = dayWokrTime
-//        self.dayOTTime = dayOTTime
-//        self.dayNightWorkTime = dayNightWorkTime
-//    }
-//
-//}
 
-//class TaskClone : Identifiable {
-//    var name : String
-//    var age : String
-//
-//
-//    init(_ name1 : String, _ age2: String) {
-//        self.name = name1
-//        self.age = age2
-//    }
-//}
-
-//class TaskData : ObservableObject {
-//    @Published
-//}
 
 //Total Task Meta View...
 struct TaskMetaData : Identifiable {
@@ -117,3 +80,13 @@ var tasks: [TaskMetaData] =
 //    ],  taskDate: getSampleDate(offset: 20)),
     
 ]
+
+
+
+
+struct myWorksamp : Identifiable {
+    var id = UUID().uuidString
+    var dayWage : String
+    var overT : String
+    var nightT : String
+}

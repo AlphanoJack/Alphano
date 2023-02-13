@@ -27,7 +27,7 @@ struct ContentView: View {
                 }
             UserSetting()
                 .tabItem{
-                    Label("UserSetting", systemImage: "calendar.badge.clock")
+                    Label("UserSetting", systemImage: "gear")
                 }
            
             
